@@ -1,0 +1,131 @@
+Data Structure-IT the way to arrange data in main memory for efficient usage.eg-Array,Linked List,Trees.
+Algorithm-It is sequence of steps to solve a problem.Eg-Sorting an array.
+Heap-In heap, the program requests dynamic memory from the main memory.This is more advantageous than stack as it deletes the memory immediately after use(Efficeint).
+Time Complexity-It is the amount of time an alogorithm takes while varying the input.
+Big O-Order of. 
+
+-->Abstract Data Type(ADT)-It is the Minimum required functionalities(MRF) and some operations in a Data Structures.
+    Eg-Arrays--MRF-get(i),set(i,num)....[i is the index here]
+      --Operations=Insert,Delete,Add,Resize.
+    Abstraction-It refers to process of hiding the details of code.
+  
+
+-->ADT's AND ARRAYS:-
+  *ADT's=set of values + set of operations.
+    set of values=total_size,used_size and base address
+    set of operations=get(i),set(i,num),add(arr),max(L).
+
+  *stacks and heaps-In NOTES.
+
+  *NOTE-An array cant be extended,it can only be reallocated space in memory to addition of new element.
+  
+  *Primary Operations in Array:-
+    i)Traversal-It is process of visiting every element in the array.
+    ii)Insertion:-
+      Case 1-Order should be maintained.
+          ind 2-->5 in array with [1,2,6,7,4]
+          Then it becomes [1,2,5,6,7,4].  NOTE:The array should have extra space.
+          Here the elements move by one index.
+      Case 2-Order need not be maintained.
+          ind 2-->5 in array with [1,2,6,7,4]
+          Then it becomes [1,2,5,7,4,6].  NOTE:The array should have extra space.
+          The element in the index goes after the last used element in the array.
+    iii)Deletion:-
+        Case 1-Deletion removes the element to be removed and moves the remaining element forward by one index.
+        Case 2-The element to be deleted is removed and the last element is replaced in its place.
+    iv)Searching
+        Linear Search-It is the process of searching each element of an unsorted array until the element is found.Done through Array Traversal.
+        Binary Search-t is the process of searching  element of an sorted array.
+-->Linked List :-
+  *In Circularly linked list the head does not matter ,as it is only a pointer where the linked list starts.
+  *How to Make Empty Linked Lists:-
+    i)Singly L.L. 
+              p->NULL
+    ii)Circular LL
+              Circular LL have a head element(Node) that is only used to provide acess to the L.L.
+              In an Empty circular LL the head node points to itself. 
+              This is only alternate visualization
+
+-->Stack-It is a array with a Top(index).Top has a default value of -1 if it is empty.
+
+  * Parenthesis Matching Problem in C :-
+    It possible to tell if expression is unmatched if it is small.But if it is Expresstion with a lots of Characters and Parenthesis then it will 
+    be hard to tell wheather it balanced or unbalanced.So we use both Stack and Array to find out wheather a expression is balanced or unbalanced.
+    Solving-
+    The Expresstion is first put inside a array and Then Traversed.If it is 
+      ( --> Push into Stack.
+      ) -->Pop in Stack.
+
+    Conditions For Balanced Expresstion :-
+    1)While Popping the stack should'nt Underflow ->Then it is unbalanced expression.
+    2)At End Of Expression(EOE),the stack should be Empty ->Else it unbalanced Expression.
+       
+  *Infix,Postfix and Prefix:-
+    >These are Notations to write a expression.
+    >Infix-
+      <operant> <operator> <operant>    Eg-p*q,a+b,etc.
+    >Postfix-
+      <operant>,<operant> <operator>    Eg- ab +,pq *
+    >Prefix-
+      <operator> <operant>,<operant>
+    >We convert Infix to postfix as it is easier for machine to understand.
+        Infix-G*(A+D)*D
+        Postfix-GAD+*D*
+    >How to Convert Infix to Prefix and Postfix:-
+        i)Parenthesis the hole expression.
+        ii)The start converting from infix to postfix from the innermost expression.
+
+  -->Queue:Follows FIFO.
+    >Data:Storage,Insertion End and Deletion End .
+    >Methods:
+      Enqueue-Add a Element 
+      Dequeue-Remove a element .
+      First value.
+      Last value
+      Peek(pos)
+      IsFull,IsEmpty
+    >Can be Implemented In Array,L_L and other ADT's too.
+
+    >Drawbacks-
+      Space is not efficientle used.(As the space before the front is empty upon Deletion)
+      Therefore,To combat this Circular Queue is Introduced.
+
+    >Circular Queue:-
+      Increment Occurs like:-
+        Linear Increment - 
+          i=i+1
+        Circular Increment -
+          i=(i+1) % size **Important
+
+    >Double-Ended Queue:-
+    It doesnt follow FIFO
+
+-->Sorting Algorithm:-
+  *Important Factors-Time Complexity,Space Complexity(Does ur algorithm take lot of space for big inputs),Stability(When two equal values are being sorted, the appearing in array should also be first in sorted array),Internal Sorting Algorithm(All data is loaded in memory) and External Sorting Algorithm(opp),Adaptive, Recurcive and Non Recurcive.
+  *These Factors help us take a decision on which sorting algorithm to use.
+  i)
+
+
+-->Trees:-
+  * It is Ideal for representing Hierarchical Data.
+  *Binary Tree-They are Trees with thier degree(No. of direct Children) not more than 2.
+  *Edge-Link That connects 2 Nodes.
+  * n nodes=n-1 edges.
+  *Degree of Tree = Highest degree of a Node present in the Tree.
+
+  * Types Of Binary Trees:
+    i)Full or Strict-All Nodes have either 0 or 2 Children.
+    ii)Perfect-Internal nodes have 2 Children and All leaf Nodes are on Same Level.
+    iii)Complete-All levels are Completely filled except possibly the last level and last level is left alligned.
+    iv)Degentrate Tree - It the when Parent Nodes only Have One Child.In it there is left Skewed and right Skewed.
+
+  * Traversal in Tree:-
+    i)PreOrder Traversal:
+        Root-->Left Subtree-->Right Subtree
+
+    ii)PostOrder Traversal:
+        Left Subtree-->Right Subtree-->Root
+
+    iii)InOrder Traversal:
+        Left Subtree-->Root -->Right Subtree
+    REMEMBER-Through the Position of the Root
