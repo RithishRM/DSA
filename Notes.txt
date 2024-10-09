@@ -129,3 +129,9 @@ Big O-Order of.
     iii)InOrder Traversal:
         Left Subtree-->Root -->Right Subtree
     REMEMBER-Through the Position of the Root
+
+  *Binary Search Tree:-
+    i)All nodes left of left subtree are lesser than root.
+    ii)All nodes of right subtree are greater than root.
+    iii) There are no duplicate nodes.
+    iv)InOrder Traversal of the BST gives a ascending Sorted Array.
