@@ -135,3 +135,7 @@ Big O-Order of.
     ii)All nodes of right subtree are greater than root.
     iii) There are no duplicate nodes.
     iv)InOrder Traversal of the BST gives a ascending Sorted Array.
+
+  *BST Node Deletion:-
+    i)Delete Leaf Node-Search Tree-Delete Node .
+    ii)Non Leaf Node -Search Node ,Search for Inorder Post and Inord Pre,Keep doing this until tree has no empty Node.
