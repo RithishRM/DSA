@@ -139,3 +139,57 @@ Big O-Order of.
   *BST Node Deletion:-
     i)Delete Leaf Node-Search Tree-Delete Node .
     ii)Non Leaf Node -Search Node ,Search for Inorder Post and Inord Pre,Keep doing this until tree has no empty Node.
+
+
+  * AVL Trees - These are made to prevent the trees from taking a linear structure.
+      Every Node in AVL has Balance Factor(BF) where 
+              BF=Hieght of right subtree - Hieght of left subtree
+      For a tree to be balanced 
+              | BF |  <=  1
+
+
+-->Graphs:-Non Linear Data Structure.They G=(V,E) are collection of edges connecting Nodes/vertices.
+    An Edge is defined by its 2 unique endpoints.Directed edge-One way connection and Unidirected Edge-Two way connection.
+    Directed Graph-Has all the Directed edges.
+    UnDirected Graph-Has all the UnDirected edges.
+    Companies use graph therory internally to suggest mutual contacts to people .
+
+    * Representation Of a Graph:-
+      i)Adjacency List - Mark the node with the list(Linked List) of its nieghbors.Eg - {(0,1)-They are nodes its connected to}
+      ii) Adjacency Matrix - They are the values of nodes in rows and columns with The thier value marked with 1 if thier is connection and 0 if the nodes have no connection.
+          NOTE - The node can be self looped/connected.
+      
+    * Graph Traversal:It is process of visiting(checking or updating) each node in a graph.
+      Two Types of Traversal Algorithm are :-
+      i) Breadth First Graph - In it we first take a Random Node and start with visiting its connecting nodes first then we repeat the process continously till all nodes are visited.
+                It is Done By :-
+                METHOD_1
+                  First Take a Node (root) and construct a Tree (by hanging it).
+                  Mark all sideways and duplicate edges as dashed calling it BFS spanning tree.
+                  Level Order of the BFS Tree is BFS Traversal.
+
+                METHOD_2
+                  Take a Random Node and Enqueue it in the Visited  and Exploration Queue.
+                  Visit All the connected vertices and Enqueue for them in Visited  and Exploration Queue.
+                  Deque the root from Exploration Queue.
+                  Keep Repeating the process and when Exploration Queue is empty the traversal is done with the Visited Queue having the Traversed List.
+          There can be multiple BFS for same graph.
+      ii)Depth First Graph - In DFS we keep exploring a the graph in depth till we find a node that was previously explored.
+                 It is Done By :-
+                  Start by puttiny any node in Top of Stack.
+                  Put the Top of stack in visited and remove it from stack .Before removing Add the Items not in visited and to stack that are connected.
+                  Keep repeating till stack not Empty.
+
+
+-->Hashing - It is concept that was introduced to store and retrieve data in O(1) . Hashing is the process of transformsing the original key into a another value 
+            which is shorter and fixed length . This key helps in finding original key faster .
+            Hash Function - Maps the key value in the Hash Table range.
+            Collision - It the process when 2 or more keys generate the same has hash .We deal with it in :-
+                  i)Seperate Chaining(Open Hashing) - This handles the collision by making every hash table cell value coming to the point to a linked list with thier identical hash values .
+                  ii)Open Addressig (Closed Hashing) - Instead Of making new Spots for incoming value they make space in use the free space in the Hash Table.
+                      Linear Probing- It is the process of resolving collision by finding the next empty spot in Hash Table through the formula:
+                                    key=(key + i) % tableSize     where i=1,2,3,...
+                      Quadratic Probing - Resolves collision using below Formula:-
+                                    key = ((key)+i^2)% tableSize
+                Rehashing - The process of increasing the hash table size when the Load Factor exceeds a certain value.
+                      Load Factor = No.of Filled Values / Total Capactity 
